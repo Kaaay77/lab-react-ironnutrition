@@ -1,14 +1,16 @@
 import { Divider, Input } from 'antd';
 
 // Iteration 5
-function Search(props) {
+function Search({input, searchFood}) {
+
+    
     
   return (
     <>
       <Divider>Search</Divider>
 
       <label>Search</label>
-      <Input value={undefined} type="text" onChange={() => {}} />
+      <Input value={input} type="text" onChange={(e) => searchFood(e)} />
     </>
   );
 }
