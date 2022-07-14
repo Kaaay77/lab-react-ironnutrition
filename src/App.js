@@ -27,6 +27,14 @@ const searchFood = (e) => {
   setComidaFiltrada(filteredFood)
  }
 
+ const clickToDelete = (name) => {
+  const comidaF = comidaFiltrada.filter((food) => {
+    
+    return food.name !== name;
+})
+setComidaFiltrada(comidaF)
+}
+
   return <div className="App App-Contain">
 <h1 style={{color:'#fff'}} >FOOD LIST 🍔🥑🌮</h1>
 
@@ -52,6 +60,7 @@ const searchFood = (e) => {
                     image={comida.image}
                     calories={comida.calories}
                     servings={comida.servings}
+                    clickToDelete={clickToDelete}
                   />
 
               </div>

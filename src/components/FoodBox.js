@@ -3,7 +3,7 @@ import React from 'react';
 
 // Iteration 2
 function FoodBox(props) {
-    const { name, image, calories, servings } = props;
+    const { key, name, image, calories, servings, clickToDelete } = props;
   return (
     <Col>
       <Card
@@ -16,7 +16,7 @@ function FoodBox(props) {
         <p>
           <b>Total Calories: {calories * servings} </b> kcal
         </p>
-        <Button type="primary"> Delete </Button>
+        <Button type="primary" onClick={(e) => clickToDelete(name)}> Delete </Button>
       </Card>
     </Col>
   );
